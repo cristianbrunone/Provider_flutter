@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teste_app/Pages/FriendListPage.dart';
 import 'package:teste_app/Pages/ListaPage.dart';
 import 'package:teste_app/Pages/MyLoginScreen.dart';
 import 'package:teste_app/Pages/NowPage.dart';
@@ -20,7 +21,7 @@ class MyRouters {
       case "/lista":
         return CupertinoPageRoute(builder: (_) => ListaPage());
       case "/now":
-        return CupertinoPageRoute(builder: (_) => NowPage());  
+        return CupertinoPageRoute(builder: (_) => NowPage());
       default:
         return CupertinoPageRoute(builder: (_) => MyLoginScreen());
     }

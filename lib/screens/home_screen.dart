@@ -37,7 +37,7 @@ class HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.all(5),
               borderRadius: BorderRadius.circular(50),
               badgeColor: Colors.redAccent,
-              borderSide: BorderSide(color: Colors.white, width: 2),
+              /*borderSide: BorderSide(color: Colors.white, width: 2),*/
             ),
             child: IconButton(
               icon: Icon(Icons.person),

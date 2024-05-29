@@ -39,7 +39,7 @@ class _MyLoginState extends State<MyLoginScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
@@ -145,18 +145,9 @@ class _MyLoginState extends State<MyLoginScreen>
                                         controller: _emailController,
                                         decoration: InputDecoration(
                                           hintText: 'name@email.com',
-                                          prefixIcon: Icon(
-                                            Icons.email,
-                                            color: const Color.fromARGB(
-                                              255,
-                                              28,
-                                              120,
-                                              196,
-                                            ).withOpacity(0.5),
-                                          ),
                                           border: OutlineInputBorder(
                                             borderRadius:
-                                                BorderRadius.circular(50.0),
+                                                BorderRadius.circular(10.0),
                                           ),
                                           filled: true,
                                           fillColor: Colors.white,
@@ -181,18 +172,9 @@ class _MyLoginState extends State<MyLoginScreen>
                                         obscureText: true,
                                         decoration: InputDecoration(
                                           hintText: 'Digite sua senha',
-                                          prefixIcon: Icon(
-                                            Icons.lock,
-                                            color: const Color.fromARGB(
-                                              255,
-                                              28,
-                                              120,
-                                              196,
-                                            ).withOpacity(0.5),
-                                          ),
                                           border: OutlineInputBorder(
                                             borderRadius:
-                                                BorderRadius.circular(50.0),
+                                                BorderRadius.circular(10.0),
                                           ),
                                           filled: true,
                                           fillColor: Colors.white,
@@ -207,27 +189,31 @@ class _MyLoginState extends State<MyLoginScreen>
                                     ),
                                     SizedBox(height: 24),
                                     // Login Button...
-                                     Padding(
-                                      padding: EdgeInsets.symmetric(horizontal: 20),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 20),
                                       child: ElevatedButton(
                                         onPressed: () => {
                                           Navigator.pushNamed(
-                                              context,
-                                              ROUTE_HOME,
-                                              )
+                                            context,
+                                            ROUTE_HOME,
+                                          )
                                         },
                                         style: ElevatedButton.styleFrom(
                                           foregroundColor: Colors.white,
-                                          backgroundColor: Color.fromARGB(255, 0, 161, 148),
-                                          padding: EdgeInsets.symmetric(vertical: 16),
+                                          backgroundColor:
+                                              Color.fromARGB(255, 2, 73, 206),
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 16),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(30),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                           ),
                                           textStyle: TextStyle(
                                             fontSize: 18,
                                           ),
                                         ),
-                                        child: Text('LOGIN'),
+                                        child: Text('Login'),
                                       ),
                                     ),
                                   ],
@@ -250,18 +236,9 @@ class _MyLoginState extends State<MyLoginScreen>
                                         controller: _emailController,
                                         decoration: InputDecoration(
                                           hintText: 'name@email.com',
-                                          prefixIcon: Icon(
-                                            Icons.email,
-                                            color: const Color.fromARGB(
-                                              255,
-                                              59,
-                                              134,
-                                              61,
-                                            ).withOpacity(0.5),
-                                          ),
                                           border: OutlineInputBorder(
                                             borderRadius:
-                                                BorderRadius.circular(50.0),
+                                                BorderRadius.circular(10.0),
                                           ),
                                           filled: true,
                                           fillColor: Colors.white,
@@ -286,18 +263,9 @@ class _MyLoginState extends State<MyLoginScreen>
                                         obscureText: true,
                                         decoration: InputDecoration(
                                           hintText: 'Digite sua senha',
-                                          prefixIcon: Icon(
-                                            Icons.lock,
-                                            color: const Color.fromARGB(
-                                              255,
-                                              59,
-                                              134,
-                                              61,
-                                            ).withOpacity(0.5),
-                                          ),
                                           border: OutlineInputBorder(
                                             borderRadius:
-                                                BorderRadius.circular(50.0),
+                                                BorderRadius.circular(10.0),
                                           ),
                                           filled: true,
                                           fillColor: Colors.white,
@@ -320,18 +288,18 @@ class _MyLoginState extends State<MyLoginScreen>
                                         style: ElevatedButton.styleFrom(
                                           foregroundColor: Colors.white,
                                           backgroundColor:
-                                              Color.fromARGB(255, 0, 161, 148),
+                                              Color.fromARGB(255, 0, 157, 76),
                                           padding: EdgeInsets.symmetric(
                                               vertical: 16),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
-                                                BorderRadius.circular(50),
+                                                BorderRadius.circular(10),
                                           ),
                                           textStyle: TextStyle(
                                             fontSize: 18,
                                           ),
                                         ),
-                                        child: Text('CADASTRAR'),
+                                        child: Text('Cadastrar'),
                                       ),
                                     ),
                                   ],
