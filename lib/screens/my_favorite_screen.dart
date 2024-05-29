@@ -16,6 +16,7 @@ class MyFavoriteScreenState extends State<MyFavoriteScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
@@ -43,7 +44,11 @@ class MyFavoriteScreenState extends State<MyFavoriteScreen> {
                       height: 100,
                     ),
                     Text(produto.title),
-                    Text(produto.price.toString())
+                    Text(produto.price.toString()),
+                    Expanded(child: 
+                    TextButton(onPressed: () {
+                       context.read<ProdutoProvider>().removeMyFavorite(produto);
+                    } , child: Text("Eliminar", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold))))
                   ],
                 ),
               );

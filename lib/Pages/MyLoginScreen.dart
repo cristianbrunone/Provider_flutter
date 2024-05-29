@@ -114,7 +114,7 @@ class _MyLoginState extends State<MyLoginScreen>
                             Padding(
                               padding: EdgeInsets.all(12.0),
                               child: Text(
-                                'Cadastrar',
+                                'Criar',
                                 style: TextStyle(
                                   fontSize: 18,
                                 ),
@@ -123,9 +123,8 @@ class _MyLoginState extends State<MyLoginScreen>
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
                       SizedBox(
-                          height: 20), // Space between TabBar and TextFields
+                          height: 14), // Space between TabBar and TextFields
                       Expanded(
                         child: TabBarView(
                           controller: _tabController,
@@ -208,25 +207,21 @@ class _MyLoginState extends State<MyLoginScreen>
                                     ),
                                     SizedBox(height: 24),
                                     // Login Button...
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 20),
+                                     Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 20),
                                       child: ElevatedButton(
                                         onPressed: () => {
-                                          Navigator.pushNamedAndRemoveUntil(
+                                          Navigator.pushNamed(
                                               context,
                                               ROUTE_HOME,
-                                              (Route<dynamic> route) => false)
+                                              )
                                         },
                                         style: ElevatedButton.styleFrom(
                                           foregroundColor: Colors.white,
-                                          backgroundColor:
-                                              Color.fromARGB(255, 0, 161, 148),
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 16),
+                                          backgroundColor: Color.fromARGB(255, 0, 161, 148),
+                                          padding: EdgeInsets.symmetric(vertical: 16),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(50),
+                                            borderRadius: BorderRadius.circular(30),
                                           ),
                                           textStyle: TextStyle(
                                             fontSize: 18,
