@@ -47,14 +47,12 @@ class _LoginPageState extends State<LoginPage> {
               Column(
                 children: [
                   TextFieldBase(
-                    validator: validateEmail,
                     "E-mail",
                     ctrlEmail,
                     icon: Icons.person,
                     height: 52,
                   ),
                   TextFieldBase(
-                    validator: validatePass,
                     "Senha",
                     ctrlPass,
                     icon: Icons.remove_red_eye,
@@ -100,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
   void login() {
     if (formKey.currentState!.validate()) {
       // Aquí puedes realizar el inicio de sesión
-      print("Login");
+      print("Login com sucesso");
     }
   }
 

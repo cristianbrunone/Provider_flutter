@@ -18,7 +18,6 @@ class ResetPasswordDialog extends StatelessWidget {
             "E-mail",
             ctrlEmail,
             height: 50,
-            validator: validateEmail,
           ),
         ],
       ),
