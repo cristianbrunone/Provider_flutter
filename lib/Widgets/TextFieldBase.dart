@@ -14,6 +14,7 @@ class TextFieldBase extends StatelessWidget {
     this.obscureText = false,
     this.icon,
     required this.height,
+    required String Function(String? email) validator,
   });
 
   @override

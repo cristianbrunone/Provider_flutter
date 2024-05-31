@@ -18,6 +18,7 @@ class ResetPasswordDialog extends StatelessWidget {
             "E-mail",
             ctrlEmail,
             height: 50,
+            validator: validateEmail,
           ),
         ],
       ),
@@ -39,4 +40,16 @@ class ResetPasswordDialog extends StatelessWidget {
   }
 
   reset() {}
+
+  String validateEmail(String? email) {
+    final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+
+    if (email == null || email.isEmpty) {
+      return "El correo electrónico es necesario";
+    } else if (!emailRegExp.hasMatch(email)) {
+      return "El correo electrónico es inválido";
+    }
+
+    return "";
+  }
 }

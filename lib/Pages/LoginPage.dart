@@ -16,7 +16,7 @@ enum FormType { login, registrer }
 class _LoginPageState extends State<LoginPage> {
   TextEditingController ctrlEmail = TextEditingController();
   TextEditingController ctrlPass = TextEditingController();
-  FormType formType = FormType.login;
+  GlobalKey<FormState> formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +47,14 @@ class _LoginPageState extends State<LoginPage> {
               Column(
                 children: [
                   TextFieldBase(
+                    validator: validateEmail,
                     "E-mail",
                     ctrlEmail,
                     icon: Icons.person,
                     height: 52,
                   ),
                   TextFieldBase(
+                    validator: validatePass,
                     "Senha",
                     ctrlPass,
                     icon: Icons.remove_red_eye,
@@ -77,20 +79,16 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () => resetPassword(context),
               ),
               ButtonBase(
-                "Entrar",
-                login,
+                name: "Entrar",
                 height: 52,
-                onPressed: () {
-                  login();
-                },
+                onTap: () => login,
               ),
               ButtonBase(
-                "Fazer meu cadastro",
-                signUp,
+                name: "Fazer meu cadastro",
                 color: Color.fromARGB(255, 0, 238, 206),
                 textColor: Color.fromARGB(255, 0, 43, 151),
                 height: 52,
-                onPressed: signUp,
+                onTap: signUp,
               ),
             ],
           ),
@@ -99,7 +97,12 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void login() {}
+  void login() {
+    if (formKey.currentState!.validate()) {
+      // Aquí puedes realizar el inicio de sesión
+      print("Login");
+    }
+  }
 
   void signUp() {}
 
@@ -110,5 +113,25 @@ class _LoginPageState extends State<LoginPage> {
         return ResetPasswordDialog();
       },
     );
+  }
+
+  String validateEmail(String? email) {
+    final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+
+    if (email == null || email.isEmpty) {
+      return "El correo electrónico es necesario";
+    } else if (!emailRegExp.hasMatch(email)) {
+      return "El correo electrónico es inválido";
+    }
+
+    return "";
+  }
+
+  String validatePass(String? value) {
+    if (value?.length == 0) {
+      return "A senha é necessaria";
+    }
+
+    return "";
   }
 }
