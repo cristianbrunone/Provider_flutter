@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_app/Pages/FriendListPage.dart';
 import 'package:teste_app/Pages/ListaPage.dart';
+import 'package:teste_app/Pages/LoginPage.dart';
 import 'package:teste_app/Pages/MyLoginScreen.dart';
 import 'package:teste_app/Pages/NowPage.dart';
+import 'package:teste_app/Pages/PerfilJogador.dart';
 import 'package:teste_app/screens/home_screen.dart';
 
 const String ROUTE_HOME = "/home";
@@ -17,7 +19,7 @@ class MyRouters {
       case "/home":
         return CupertinoPageRoute(builder: (_) => HomeScreen());
       case "/login":
-        return CupertinoPageRoute(builder: (_) => MyLoginScreen());
+        return CupertinoPageRoute(builder: (_) => LoginPage());
       case "/lista":
         return CupertinoPageRoute(builder: (_) => ListaPage());
       case "/now":
