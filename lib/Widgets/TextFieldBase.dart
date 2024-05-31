@@ -7,6 +7,7 @@ class TextFieldBase extends StatelessWidget {
   final IconData? icon;
   final bool obscureText;
   final double height;
+  final String? Function(String?)? validator;
 
   TextFieldBase(
     this.name,
@@ -14,6 +15,7 @@ class TextFieldBase extends StatelessWidget {
     this.obscureText = false,
     this.icon,
     required this.height,
+    this.validator,
   });
 
   @override
