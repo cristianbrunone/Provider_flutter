@@ -17,7 +17,7 @@ class ResetPasswordDialog extends StatelessWidget {
           TextFieldBase(
             "E-mail",
             ctrlEmail,
-            height: 50,
+            height: 50, autovalidateMode: AutovalidateMode.onUserInteraction,
           ),
         ],
       ),
